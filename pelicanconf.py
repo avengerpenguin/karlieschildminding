@@ -3,12 +3,12 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Karlie Vanes'
-SITENAME = u'Karlie Vanes Childminding'
+SITENAME = u"Karlie's Childminding Services"
 SITEURL = ''
 
 PATH = 'content'
 
-TIMEZONE = 'Europe/Paris'
+TIMEZONE = 'Europe/London'
 
 DEFAULT_LANG = u'en'
 
@@ -35,3 +35,17 @@ DEFAULT_PAGINATION = False
 THEME = './theme'
 
 INDEX_SAVE_AS = 'blog.html'
+
+PLUGIN_PATHS=['./plugins']
+PLUGINS = ['assets']
+
+ASSET_CONFIG=(
+    ('less_bin', '/usr/bin/lessc'),
+    ('less_run_in_debug', True)
+)
+
+ASSET_BUNDLES=(
+    ('less', ['test.less'], {'filters': 'less'}),
+)
+
+DISPLAY_PAGES_ON_MENU=False
