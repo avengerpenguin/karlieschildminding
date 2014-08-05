@@ -3,6 +3,7 @@ branches:
   only:
   - master
 install:
+- apt-get install node-less
 - pip install pelican ghp-import markdown
 script:
 - make travis
