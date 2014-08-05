@@ -13,3 +13,5 @@ My services are available from 7:30am to 5:30pm, Monday to Friday and term-time 
 
 For information and availability, please email me at
 [info@karlieschildminding.co.uk](mailto:info@karlieschildminding.co.uk).
+
+Alternatively, give me a call on 07756577027.
