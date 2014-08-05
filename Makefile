@@ -55,7 +55,7 @@ help:
 	@echo '                                                                       '
 
 css:
-	lesscpy -v ./theme/static/css/ -o ./theme/static/css/
+	lesscpy -v ./theme/static/css/style.less -o ./theme/static/css/
 
 html: css
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
