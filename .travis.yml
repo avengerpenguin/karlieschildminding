@@ -3,8 +3,7 @@ branches:
   only:
   - master
 install:
-- sudo apt-get install node-less
-- pip install pelican ghp-import markdown
+- pip install pelican ghp-import markdown lesscpy
 script:
 - make travis
 env:
