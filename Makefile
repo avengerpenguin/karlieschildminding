@@ -55,8 +55,8 @@ help:
 	@echo '                                                                       '
 
 css:
-	lessc theme/static/css/grid.less >theme/static/css/grid.css
-	lessc theme/static/css/style.less >theme/static/css/style.css
+	lesscpy theme/static/css/grid.less >theme/static/css/grid.css
+	lesscpy theme/static/css/style.less >theme/static/css/style.css
 
 html: css
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
