@@ -57,8 +57,14 @@ help:
 css:
 	lesscpy -V -o ./theme/static/css/ ./theme/static/css
 
-html: css
+policies-pdfs:
+	$(MAKE) -C policies
+	cp policies/pdf/*.pdf content/policies
+
+html: css policies-pdfs
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+	./policy-index.sh
+
 
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
@@ -85,8 +91,9 @@ stopserver:
 	kill -9 `cat srv.pid`
 	@echo 'Stopped Pelican and SimpleHTTPServer processes running in background.'
 
-publish: css
+publish: css policies-pdf
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
+	./policy-index.sh
 
 ssh_upload: publish
 	scp -P $(SSH_PORT) -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
@@ -114,4 +121,4 @@ travis: publish
 	ghp-import -n -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
 	git push -fq https://${GH_TOKEN}@github.com/$(TRAVIS_REPO_SLUG).git gh-pages > /dev/null
 
-.PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload cf_upload github css
+.PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload cf_upload github css policies-pdfs

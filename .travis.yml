@@ -3,6 +3,7 @@ branches:
   only:
   - master
 install:
+- sudo apt-get install texlive-xetex ttf-mscorefonts-installer fonts-crosextra-carlito fonts-crosextra-caladea
 - pip install pelican ghp-import markdown lesscpy
 script:
 - make travis

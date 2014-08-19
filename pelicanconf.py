@@ -50,5 +50,7 @@ INDEX_SAVE_AS = 'blog.html'
 
 DISPLAY_PAGES_ON_MENU=False
 
-STATIC_PATHS = ['extra/CNAME']
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+STATIC_PATHS = ['extra/CNAME', 'policies']
+EXTRA_PATH_METADATA = {
+    'extra/CNAME': {'path': 'CNAME'},
+    }
