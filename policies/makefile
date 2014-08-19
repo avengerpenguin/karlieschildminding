@@ -5,6 +5,7 @@ replace = echo $(1) | sed 's/?/ /g'
 all: $(subst tex,pdf,$(shell ls *.tex | sed 's/ /?/g'))
 
 %.pdf: %.tex
+	mkdir -p pdf
 	xelatex -output-directory=pdf -halt-on-error -interaction=nonstopmode "`$(call replace,$<)`"
 	rm pdf/*.log pdf/*.aux
 
