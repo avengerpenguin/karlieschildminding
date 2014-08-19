@@ -5,7 +5,8 @@ branches:
 install:
 - wget http://mirrors.kernel.org/ubuntu/pool/universe/f/fonts-crosextra-carlito/fonts-crosextra-carlito_20130920-1_all.deb http://mirrors.kernel.org/ubuntu/pool/universe/f/fonts-crosextra-caladea/fonts-crosextra-caladea_20130214-1_all.deb
 - sudo dpkg -i fonts-crosextra-carlito_20130920-1_all.deb fonts-crosextra-caladea_20130214-1_all.deb
-- sudo apt-get install texlive-xetex ttf-mscorefonts-installer
+- sudo apt-get update
+- sudo apt-get install -y texlive-xetex ttf-mscorefonts-installer
 - pip install pelican ghp-import markdown lesscpy
 script:
 - make travis
