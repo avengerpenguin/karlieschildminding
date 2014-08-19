@@ -59,6 +59,7 @@ css:
 
 policies-pdfs:
 	$(MAKE) -C policies
+	mkdir -p content/policies
 	cp policies/pdf/*.pdf content/policies
 
 html: css policies-pdfs
