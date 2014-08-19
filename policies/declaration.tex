@@ -1,0 +1,80 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage{fullpage}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\defaultfontfeatures{Ligatures=TeX}
+% Set sans serif font to Calibri
+\setsansfont{Carlito}
+% Set serifed font to Cambria
+\setmainfont{Caladea}
+% Define light and dark Microsoft blue colours
+\definecolor{MSBlue}{rgb}{.204,.353,.541}
+\definecolor{MSLightBlue}{rgb}{.31,.506,.741}
+% Define a new fontfamily for the subsubsection font
+% Don't use \fontspec directly to change the font
+\newfontfamily\subsubsectionfont[Color=MSLightBlue]{Times New Roman}
+% Set formats for each heading level
+\titleformat*{\section}{\huge\bfseries\sffamily\color{MSBlue}}
+\titleformat*{\subsection}{\Large\bfseries\sffamily\color{MSLightBlue}}
+\titleformat*{\subsubsection}{\itshape\subsubsectionfont}
+
+\setcounter{secnumdepth}{0}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2\baselineskip}%
+
+\pagestyle{empty}
+
+\begin{document}
+\section{Declaration}
+
+I confirm that I have read all of the following policies:
+
+\begin{itemize}
+  \item Safeguarding Policy;
+  \item Complaints Policy;
+  \item Behaviour Management Policy;
+  \item Partnership With Parents Policy;
+  \item Equal Opportunities Policy;
+  \item Accidents \& Incident Policy;
+  \item Illness \& Sickness Policy;
+  \item Medication Policy;
+  \item Health \& Safety Policy;
+  \item Risk Assessment Policy;
+  \item Fire Safety Policy;
+  \item Alcohol, Smoking \& Other Subtances Policy;
+  \item Healthy Eating Policy;
+  \item Uncollected Child Policy;
+  \item Lost Child Policy; and
+  \item Visitors Policy
+\end{itemize}
+
+and that I agree to the procedures discussed therein.
+
+\begin{table}[h]
+  \def\arraystretch{2.0}
+  \begin{tabularx}{\textwidth}{!{\color{gray}\vrule}X!{\color{gray}\vrule}X!{\color{gray}\vrule}X!{\color{gray}\vrule}X!{\color{gray}\vrule}}
+    \arrayrulecolor{gray}\hline
+    Child's Name & Parent's Name & Signature & Date \\
+    \hline
+    ~ & ~ & ~ & \\
+    \hline
+    ~ & ~ & ~ & \\
+    \hline
+    ~ & ~ & ~ & \\
+    \hline
+    ~ & ~ & ~ & \\
+    \hline
+    ~ & ~ & ~ & \\
+    \hline
+    ~ & ~ & ~ & \\
+    \hline
+  \end{tabularx}
+\end{table}
+
+\end{document}

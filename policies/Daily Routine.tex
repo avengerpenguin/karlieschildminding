@@ -1,0 +1,81 @@
+\documentclass[10pt]{article}
+
+\usepackage{fullpage}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\defaultfontfeatures{Ligatures=TeX}
+% Set sans serif font to Calibri
+\setsansfont{Carlito}
+% Set serifed font to Cambria
+\setmainfont{Caladea}
+% Define light and dark Microsoft blue colours
+\definecolor{MSBlue}{rgb}{.204,.353,.541}
+\definecolor{MSLightBlue}{rgb}{.31,.506,.741}
+% Define a new fontfamily for the subsubsection font
+% Don't use \fontspec directly to change the font
+\newfontfamily\subsubsectionfont[Color=MSLightBlue]{Times New Roman}
+% Set formats for each heading level
+\titleformat*{\section}{\huge\bfseries\sffamily\color{MSBlue}}
+\titleformat*{\subsection}{\Large\bfseries\sffamily\color{MSLightBlue}}
+\titleformat*{\subsubsection}{\itshape\subsubsectionfont}
+
+\setcounter{secnumdepth}{0}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{\baselineskip}%
+
+\pagestyle{empty}
+
+\begin{document}
+\section{Daily Routine}
+
+\subsection{Morning Session}
+
+7:30- 8:30 Breakfast and Free Play
+
+8:30- 9:00 School Run (If necessary)
+
+9:00-11:00 Outing/Activity (10:00 Fruit Snack)
+
+11:00-12:20 Free Play
+
+12:20- 12:30 Story \& Rhyme Time
+
+\subsection{Afternoon Session}
+
+12:30- 13:00 Free Play (Lunch Preparation)
+
+13:00-14:00 Lunch \& Free Play
+
+14:00- 15:00 Activity
+
+15:00-15:30 School Run (If necessary)
+
+15:30-16:00 Free Play (Tea Preparation)
+
+16:00-16:30 Tea
+
+16:30- 17:15 Free Play
+
+17:15- 17:30 Story \& Rhyme Time
+
+17:30 Hometime
+
+\subsection{Outing/Activity}
+
+M- Seasonal/World Craft (e.g. Flags, Traditions, Foods etc.)
+
+T- Park/Stay \& Play Session
+
+W- Literary Craft (Based on our favourite books this week)
+
+Th- Library
+
+F- Baking
+
+~
+\end{document}

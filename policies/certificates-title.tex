@@ -1,0 +1,39 @@
+\documentclass[10pt,a4paper]{report}
+
+\usepackage{fullpage}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\defaultfontfeatures{Ligatures=TeX}
+% Set sans serif font to Calibri
+\setsansfont{Carlito}
+% Set serifed font to Cambria
+\setmainfont{Caladea}
+% Define light and dark Microsoft blue colours
+\definecolor{MSBlue}{rgb}{.204,.353,.541}
+\definecolor{MSLightBlue}{rgb}{.31,.506,.741}
+% Define a new fontfamily for the subsubsection font
+% Don't use \fontspec directly to change the font
+\newfontfamily\subsubsectionfont[Color=MSLightBlue]{Times New Roman}
+% Set formats for each heading level
+\titleformat*{\section}{\huge\bfseries\sffamily\color{MSBlue}}
+\titleformat*{\subsection}{\Large\bfseries\sffamily\color{MSLightBlue}}
+\titleformat*{\subsubsection}{\itshape\subsubsectionfont}
+
+\setcounter{secnumdepth}{0}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2\baselineskip}%
+
+\pagestyle{empty}
+
+\title{\fontsize{3cm}{1em}\bfseries\sffamily\color{MSBlue} Certificates}
+\date{}
+\begin{document}
+
+\maketitle
+
+\end{document}
