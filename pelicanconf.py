@@ -17,12 +17,6 @@ FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
-# Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
-
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
@@ -36,21 +30,21 @@ THEME = './theme'
 
 INDEX_SAVE_AS = 'blog.html'
 
-#PLUGIN_PATHS=['./plugins']
-#PLUGINS = ['assets']
-
-#ASSET_CONFIG=(
-#    ('less_bin', '/usr/bin/lessc'),
-#    ('less_run_in_debug', True)
-#)
-
-#ASSET_BUNDLES=(
-#    ('less', ['test.less'], {'filters': 'less'}),
-#)
+PLUGIN_PATHS=['./plugins']
+PLUGINS = ['gallery.gallery', 'thumbnailer']
 
 DISPLAY_PAGES_ON_MENU=False
 
-STATIC_PATHS = ['extra/CNAME', 'policies']
+STATIC_PATHS = ['extra/CNAME', 'policies', 'images']
+
 EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
     }
+
+
+IMAGE_PATH='images/gallery'
+THUMBNAIL_DIR='images'
+THUMBNAIL_SIZES={
+    'thumbnails': '180x160',
+}
+THUMBNAIL_KEEP_NAME=True

@@ -55,7 +55,8 @@ help:
 	@echo '                                                                       '
 
 css:
-	lesscpy -V -o ./theme/static/css/ ./theme/static/css
+	mkdir -p output/theme/css
+	lesscpy -V -o ./output/theme/css ./theme/static/css
 
 policies-pdfs:
 	$(MAKE) -C policies
@@ -64,6 +65,7 @@ policies-pdfs:
 
 html: css policies-pdfs
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+	rm -f output/theme/css/style.less
 	./policy-index.sh
 
 
