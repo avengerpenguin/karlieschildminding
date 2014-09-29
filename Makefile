@@ -97,6 +97,7 @@ stopserver:
 publish: css policies-pdfs
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 	rm -f output/theme/css/style.less
+	lesscpy -V -o ./output/theme/css ./theme/static/css
 	./policy-index.sh
 
 ssh_upload: publish
