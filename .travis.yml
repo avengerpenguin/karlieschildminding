@@ -8,9 +8,9 @@ before_install:
 - sudo add-apt-repository ppa:texlive-backports/ppa -y
 - sudo apt-get update
 - echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
-- sudo apt-get install -y texlive-xetex texlive-latex-extra msttcorefonts
+- sudo apt-get install -y texlive-xetex texlive-latex-extra msttcorefonts libjpeg-dev
 install:
-- pip install pelican ghp-import markdown lesscpy
+- pip install pelican ghp-import markdown lesscpy pillow
 script:
 - make travis
 env:
