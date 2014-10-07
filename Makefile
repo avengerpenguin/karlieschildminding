@@ -63,7 +63,7 @@ policies-pdfs:
 	mkdir -p content/policies
 	cp policies/pdf/*.pdf content/policies
 
-html: css policies-pdfs
+html: css
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 	rm -f output/theme/css/style.less
 	./policy-index.sh

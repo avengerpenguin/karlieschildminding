@@ -8,7 +8,7 @@
     {{ translations.translations_for(page) }}
   
   {% for album, images in page.gallery.iteritems() %}
-  <ul>
+  <ul class="gallery">
     {% for image in images %}
     <li class="thumbnail"><a class="{{ album }} cboxElement" href="{{ SITEURL }}/images/gallery/{{album}}/{{ image }}" title="{{ image }}"><img src="{{ SITEURL }}/images/thumbnails/{{ image }}"></a></li>
     {% endfor %}
