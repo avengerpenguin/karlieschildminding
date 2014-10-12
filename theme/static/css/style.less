@@ -172,8 +172,14 @@ article {
 }
 
 ul.gallery {
-    text-align: center;
-    margin: 0 auto;
+    display: block;
+    margin: 0 auto; 
+    @media only screen  and (max-width: 980px) {
+	max-width: 364px;
+    }
+    @media only screen  and (max-width: 379px) {
+	max-width: 186px;
+    }
 }
 
 li.thumbnail {
