@@ -1,0 +1,8 @@
+{% if DISPLAY_PAGES_ON_MENU != False%}
+  <nav id="menu">
+    <ul>
+      {% for p in PAGES %}
+        <li><a {% if p == page %}class="active" {% endif %}href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+      {% endfor %}
+  </nav>
+{% endif %}

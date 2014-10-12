@@ -33,7 +33,6 @@ INDEX_SAVE_AS = 'blog.html'
 PLUGIN_PATHS=['./plugins']
 PLUGINS = ['gallery.gallery', 'thumbnailer']
 
-DISPLAY_PAGES_ON_MENU=False
 
 STATIC_PATHS = ['extra/CNAME', 'policies', 'images']
 

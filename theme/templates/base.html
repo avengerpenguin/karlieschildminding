@@ -39,6 +39,9 @@
     <header id="banner">
       <h1><a href="{{ SITEURL }}/">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a></h1>
     </header><!-- /#banner -->
+
+    {% include 'menu.html' %}
+
     {% block content %}
     {% endblock %}
   </body>

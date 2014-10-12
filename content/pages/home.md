@@ -1,5 +1,6 @@
 title: About Me…
 save_as: index.html
+url: index.html
 
 Hi, my name is Karlie. I am 28 and I am a soon-to-be Ofsted-registered childminder living in the Walkden area — only a stone's throw from the train station and 5 minutes from Walkden centre. 
 
