@@ -12,7 +12,7 @@ In our home, we have a secure, enclosed garden and a lovely playroom for lots of
 
 I am less than 5 minutes' walk away from Parr Fold Park and am well-situated to visit toddler groups, play centres, the library and other amenities.
 
-My services are available from 7:30am to 5:30pm, Monday to Friday and term-time only.
+My services are available from 7:30am to 5:30pm, Monday to Friday, during term-time only.
 
 For information and availability, please email me at
 [info@karlieschildminding.co.uk](mailto:info@karlieschildminding.co.uk).
