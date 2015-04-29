@@ -1,5 +1,5 @@
 title: Photos
 template: gallery
-save_as: photos.html
-url: photos.html
+save_as: photos/index.html
+url: photos
 
