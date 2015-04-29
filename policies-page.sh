@@ -7,9 +7,9 @@ echo '<html><head><title>Policies</title><meta name="url" content="policies" /><
 sed -r 's/([^.]*)\.pdf/<li><a href=\"\/files\/\0\">\1<\/a><\/li>/g' >>content/pages/policies.html <<EOF
 Accident and Incident Policy.pdf
 Alcohol, Smoking and Other Substances Policy.pdf
-A Safeguarding Policy.pdf
 Behaviour Management Policy.pdf
 Complaints Policy.pdf
+Equal Opportunities Policy.pdf
 Fees Policy.pdf
 Fire Policy and Evacuation Plan.pdf
 Health and Safety Policy.pdf
@@ -19,6 +19,7 @@ Lost Child Policy.pdf
 Medication Policy.pdf
 Partnership With Parents Policy.pdf
 Risk Assessment Policy.pdf
+Safeguarding Policy.pdf
 Uncollected Child Policy.pdf
 Visitors Policy.pdf
 EOF
