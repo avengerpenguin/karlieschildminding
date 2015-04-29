@@ -44,6 +44,6 @@ EXTRA_PATH_METADATA = {
 IMAGE_PATH='images/gallery'
 THUMBNAIL_DIR='images'
 THUMBNAIL_SIZES={
-    'thumbnails': '180x160',
+    'thumbnails': '134x120',
 }
 THUMBNAIL_KEEP_NAME=True
