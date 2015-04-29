@@ -2,7 +2,7 @@
 
 cd `dirname $0`
 
-echo '<html><head><title>Policies</title></head><body><ul class="policies">' >content/pages/policies.html
+echo '<html><head><title>Policies</title><meta name="url" content="policies" /><meta name="save_as" content="policies/index.html" /></head><body><ul class="policies">' >content/pages/policies.html
 
 sed -r 's/([^.]*)\.pdf/<li><a href=\"\/files\/\0\">\1<\/a><\/li>/g' >>content/pages/policies.html <<EOF
 Accident and Incident Policy.pdf
