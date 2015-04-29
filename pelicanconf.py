@@ -34,7 +34,7 @@ PLUGIN_PATHS=['./plugins']
 PLUGINS = ['gallery.gallery', 'thumbnailer']
 
 
-STATIC_PATHS = ['extra/CNAME', 'policies', 'images']
+STATIC_PATHS = ['extra/CNAME', 'files', 'images']
 
 EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},

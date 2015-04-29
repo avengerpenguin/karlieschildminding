@@ -3,28 +3,29 @@
 *.pyc
 *~
 /cache
-/content/policies/A Safeguarding Policy.pdf
-/content/policies/Accident and Incident Policy.pdf
-/content/policies/Alcohol, Smoking and Other Substances Policy.pdf
-/content/policies/Behaviour Management Policy.pdf
-/content/policies/Complaints Policy.pdf
-/content/policies/Daily Routine.pdf
-/content/policies/Equal Opportunities Policy.pdf
-/content/policies/Fire Policy and Evacuation Plan.pdf
-/content/policies/Health and Safety Policy.pdf
-/content/policies/Healthy Eating Policy.pdf
-/content/policies/Illness and Sickness Policy.pdf
-/content/policies/Lost Child Policy.pdf
-/content/policies/Medication Policy.pdf
-/content/policies/Partnership With Parents Policy.pdf
-/content/policies/Risk Assessment Policy.pdf
-/content/policies/Uncollected Child Policy.pdf
-/content/policies/Visitors Policy.pdf
-/content/policies/banner.pdf
-/content/policies/certificates-title.pdf
-/content/policies/declaration.pdf
-/content/policies/photobook-title.pdf
-/content/policies/policies-title.pdf
-/content/policies/portfolio-title.pdf
-/content/policies/risk-title.pdf
+/content/files/A Safeguarding Policy.pdf
+/content/files/Accident and Incident Policy.pdf
+/content/files/Alcohol, Smoking and Other Substances Policy.pdf
+/content/files/Behaviour Management Policy.pdf
+/content/files/Complaints Policy.pdf
+/content/files/Daily Routine.pdf
+/content/files/Equal Opportunities Policy.pdf
+/content/files/Fire Policy and Evacuation Plan.pdf
+/content/files/Health and Safety Policy.pdf
+/content/files/Healthy Eating Policy.pdf
+/content/files/Illness and Sickness Policy.pdf
+/content/files/Lost Child Policy.pdf
+/content/files/Medication Policy.pdf
+/content/files/Partnership With Parents Policy.pdf
+/content/files/Risk Assessment Policy.pdf
+/content/files/Uncollected Child Policy.pdf
+/content/files/Visitors Policy.pdf
+/content/files/banner.pdf
+/content/files/certificates-title.pdf
+/content/files/declaration.pdf
+/content/files/photobook-title.pdf
+/content/files/policies-title.pdf
+/content/files/portfolio-title.pdf
+/content/files/risk-title.pdf
 /policies/pdf/*
+/content/pages/policies.html

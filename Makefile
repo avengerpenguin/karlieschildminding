@@ -60,10 +60,11 @@ css:
 
 policies-pdfs:
 	$(MAKE) -C policies
-	mkdir -p content/policies
-	cp policies/pdf/*.pdf content/policies
+	mkdir -p content/files
+	cp policies/pdf/*.pdf content/files
 
-html: css
+html: css policies-pdfs
+	./policies-page.sh
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 	rm -f output/theme/css/style.less
 	./policy-index.sh
@@ -73,6 +74,7 @@ clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
 
 regenerate:
+	./policies-page.sh
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 serve:
@@ -95,6 +97,7 @@ stopserver:
 	@echo 'Stopped Pelican and SimpleHTTPServer processes running in background.'
 
 publish: css policies-pdfs
+	./policies-page.sh
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 	rm -f output/theme/css/style.less
 	lesscpy -V -o ./output/theme/css ./theme/static/css
