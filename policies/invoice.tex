@@ -1,0 +1,96 @@
+\documentclass[a4paper]{article}
+
+\usepackage{fullpage}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{titlesec}
+
+\defaultfontfeatures{Ligatures=TeX}
+
+\setsansfont{Carlito}
+\setmainfont{Caladea}
+
+\definecolor{MSBlue}{rgb}{.204,.353,.541}
+\definecolor{MSLightBlue}{rgb}{.31,.506,.741}
+\newfontfamily\subsubsectionfont[Color=MSLightBlue]{Times New Roman}
+
+\titleformat*{\section}{\huge\bfseries\sffamily\color{MSBlue}}
+\titleformat*{\subsection}{\Large\bfseries\sffamily\color{MSLightBlue}}
+\titleformat*{\subsubsection}{\itshape\subsubsectionfont}
+
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{enumitem}
+
+\setcounter{secnumdepth}{0}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{\baselineskip}%
+
+\setlength{\headheight}{80pt}
+\setlength{\headsep}{25pt}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[R]{\huge\bfseries\sffamily\color{MSBlue} Karlie's Childminding Services}
+\fancyhead[L]{\includegraphics[width=3cm]{../design/butterfly.png}}
+
+
+\begin{document}
+
+\section{Invoice}
+
+\subsection{Fixed Monthly Payment}
+
+Customer: \underline{\hspace{4cm}}
+
+Charges for the month/year: \underline{\hspace{4cm}}
+
+\vspace{1cm}
+
+\begin{table}[h]
+  \def\arraystretch{2.0}
+  \begin{tabularx}{\textwidth}{|X|X|X|X|}
+    \hline
+    Week Commencing & Service & Cost \\
+    \hline
+    ~ & ~ & \\
+    \hline
+    ~ & ~ & \\
+    \hline
+    ~ & ~ & \\
+    \hline
+    ~ & ~ & \\
+    \hline
+    ~ & ~ & \\
+    \hline
+    ~ & ~ & \\
+    \hline
+    ~ & ~ & \\
+    \hline
+    ~ & ~ & \\
+    \hline
+    ~ & ~ & \\
+    \hline
+    ~ & ~ & \\
+    \hline
+  \end{tabularx}
+\end{table}
+
+\vspace{1cm}
+
+Month total: \underline{\hspace{4cm}}
+
+Balance from previous invoice: \underline{\hspace{4cm}}
+
+Amount paid before start of month: \underline{\hspace{4cm}}
+
+Total balance to date: \underline{\hspace{4cm}}
+
+This invoice provides a record of your current credit balance based on actual
+services provided to date. No further payments are owed above the agreed, fixed
+amount already paid as stated on this invoice.
+
+\input{includes/footer.tex}
