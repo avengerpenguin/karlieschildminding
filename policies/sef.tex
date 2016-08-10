@@ -24,6 +24,35 @@
 \titleformat*{\section}{\Large\bfseries\sffamily\color{MSLightBlue}}
 \titleformat*{\subsection}{\itshape\subsectionfont}
 
+\usepackage{calc}
+\makeatletter
+\newcommand{\DESCRIPTION@original@item}{}
+\let\DESCRIPTION@original@item\item
+\newcommand*{\DESCRIPTION@envir}{DESCRIPTION}
+\newlength{\DESCRIPTION@totalleftmargin}
+\newlength{\DESCRIPTION@linewidth}
+\newcommand{\DESCRIPTION@makelabel}[1]{\llap{#1}}%
+\newcommand{\DESCRIPTION@item}[1][]{%
+  \setlength{\@totalleftmargin}%
+       {\DESCRIPTION@totalleftmargin+\widthof{\textbf{#1 }}-\leftmargin}%
+  \setlength{\linewidth}
+       {\DESCRIPTION@linewidth-\widthof{\textbf{#1 }}+\leftmargin}%
+  \par\parshape \@ne \@totalleftmargin \linewidth
+  \DESCRIPTION@original@item[\textbf{#1}]%
+}
+\newenvironment{DESCRIPTION}
+  {\list{}{\setlength{\labelwidth}{0cm}%
+           \let\makelabel\DESCRIPTION@makelabel}%
+   \setlength{\DESCRIPTION@totalleftmargin}{\@totalleftmargin}%
+   \setlength{\DESCRIPTION@linewidth}{\linewidth}%
+   \renewcommand{\item}{\ifx\@currenvir\DESCRIPTION@envir
+                           \expandafter\DESCRIPTION@item
+                        \else
+                           \expandafter\DESCRIPTION@original@item
+                        \fi}}
+  {\endlist}
+  \makeatother
+  
 \title{Self-Evaluation Form}
 \author{Karlie Vanes}
 \date{}
@@ -46,7 +75,7 @@ As the main provider, earlier this year I have been to Observation, Assessment a
 
 \section{Training Undertaken}
 
-\begin{description}
+\begin{DESCRIPTION}
 \item [07/12/13] First Aid for Childcare (The Training Co.) (12 hrs)
 \item [05/01/14] EYFS Tracker Training (Starting Life Well) (2 hrs)
 \item [09/01/14] Ofsted Inspector Framework Training (Starting Life Well) (2 hrs)
@@ -64,7 +93,7 @@ As the main provider, earlier this year I have been to Observation, Assessment a
 \item [18/03/16] Nutrition in the Early Years (Laser Learning) (1 hr)
 \item [13/06/16] Safe Sleep Guidance Cluster Training (1hr 30 mins) (Starting Life Well)
 \item [20/06/16] General Update Cluster Training (2 hrs) (Starting Life Well)
-\end{description}
+\end{DESCRIPTION}
 
 \chapter{Views of those who use my setting and who work with me}
 
@@ -89,7 +118,7 @@ As the only child on register at the moment is 16 months old, (as of 21/06/16) t
 
 \chapter{Effectiveness of Leadership and Management}
 
-\section{Managing children}
+\section{Managing the setting}
 
 I pride myself on promoting an atmosphere that encourages children to thrive and excel. I create a warm home-from-home environment which allows children to explore, learn, discover and socialise. I always tailor activities to each child's individual needs and use planning effectively to enable children to flourish and achieve independent of their peers. Each child has unique next steps that are designed for them from careful observation to enable them to progress through the EYFS learning and development pathways. This school term I have identified methods to improve my planning and have implemented them, seeing an almost immediate improvement in my efficiency, improving sharing techniques with parents, encouraging their participation and creating a more accountable, circular approach to my planning. 
 
@@ -102,9 +131,11 @@ When appropriate training sessions are unavailable via my local authority, I fin
 
 In my personal time, I enjoy to chat online with other Childminders, getting ideas for activities and looking for any way to ensure that my setting is exercising best practice. Other Childminders so far have been useful for a soundboard for new planning concepts, recommendations for resources for my setting, sharing new government policies and documentation, good activity ideas for specific play schemas, etc. I particularly like to visit the Childminding Help Forum  and the Independent Childminders group on Facebook. I have an online community of Childminders that I met at my “Preparation for Registration” training and I have found this very useful and a good source of advice, particularly when starting out after registration . There are also a lot of Childminders that meet up at the “story-rhyme time” session at the library and it is nice to exchange ideas and information with them. I have found that the children love to socialise and play together. In my personal time I have also read relevant documentation such as “The statutory framework for the EYFS”, “The early years inspection handbook”, “The common inspection framework”, “Getting it right first time”, “Inspecting safeguarding in early years, education and skills settings”, and others. I feel it is important to remain informed and to refresh your memory frequently. The Foundation Years website has also been a fantastic source of information and interesting reading. I have also made sure to remain in touch with my Local Authority's “Starting Life Well” (Early Years) team. They are always there to lend a hand and to offer advice. I feel this type of working in partnership is very important and a great way of remaining informed, getting advice and giving back to the Childminding community as well.
 
-\section{Self-evaluation}
+\section{Working in Partnership}
 
 To successfully evaluate the quality of my provision I have discussed above how I like to work in partnership with parents and frequently ask for their feedback verbally and via questionnaires. If a parent has a request or a suggestion for improvement then I act on them immediately, as I find their feedback invaluable to improving my setting. I have had discussions with parents on a wide range of subjects, if I have been able to offer advice or guidance. I have offered advice on introducing independent feeding, vitamins, phasing out formula milk, sleep regression, behaviour management, good play activities and more. I have given resources (such as homemade play dough and slime) for them to take home to promote a continuation of learning in the child's home environment with their parents and extended family. I see it as my responsibility to have a positive effect on children at all times, not just during the time that they are in my setting. Working in partnership with parents and having an exemplary two way communication system is a vital way to ensure this and I make it very clear to parents that I am always here to help them and to offer advice. 
+
+\section{Self-evaluation & cohort tracking}
 
 I also evaluate the quality of my provision by observing how children develop. A child's development is one of the best ways to ensure that your practice is successful and effective. If a child isn't progressing as expected along the pathway of the EYFS then this can be an indicator that your teaching methods may need to be re evaluated. Inside each child's Learning Journey, I keep a record of every observation that I make with respect to each aspect of the EYFS learning and development areas. In the past I have compared multiple children's observation matrices and looked for any area where observations have been less frequent than others. If I have been able to detect an area like this in the past then I have altered my planning to ensure that activities are appropriately encouraging learning in this particular area. As mentioned above, I also tailor each child's individual planning to encourage them to progress to the best of their ability. I use their observation matrix as a good tool to help do this alongside their individual learning and development trackers.
 
@@ -122,7 +153,7 @@ Planning done in the setting has different levels. Individual planning is very c
 
 My weekly planning sheets ensure that the activities I intend to do will cover a wide range of EYFS learning and development areas and are also relevant to children's next steps and interests. These are stuck up on my parents noticeboard, encouraging parents to share their opinions on the activities.
 
-\section{Working with parents}
+\section{Starting Points}
 
 To ensure that I have reliable starting points all parents are given a copy of “Early years outcomes” before the child starts at the setting and are asked to highlight the statements in there that they believe their child has demonstrated. I then spend the first month of a child's time here carefully observing them to gather evidence for these statements and note them on the child's development tracker alongside their parent's contributions. This ensures that I am able to monitor a child's progress from the beginning of their time with me and am able to ensure that all activities will be of benefit to them, encouraging them to move down their own pathway of learning, with their own next steps.
 
@@ -132,13 +163,15 @@ I promote equal opportunities as it is important to recognise that every child i
 
 I actively promote the fundamental British Values of democracy, rule of law, individual liberty, mutual respect and tolerance for those with different faiths and beliefs, as they are already implicitly embedded in the EYFS. I understand that I have due regard to the need to prevent people from being drawn into terrorism and to protect them from radicalisation and extremism. I will do this by using all aspects of the EYFS. When utilising personal, social and emotional development children are encouraged to share, take turns and collaborate. Children are given opportunities to develop enquiring minds in an atmosphere where questions are valued. Children are encouraged to talk about their feelings, for example when they do or don't need help. They are encouraged to know that their views count and that their input is valued. When age-appropriate, I will demonstrate appropriate democracy in action, a good example of this will be to ask children to share their views on what toys and resources we should use, possibly with a show of hands.
 
-\section{Policies and EYFS}
+\section{Policies and compliance}
 
 I have a behaviour management policy that I follow and it includes some basic house rules that are enacted age appropriately. Primarily it is important that I myself am a good role model and don't expect children to behave in a way that I myself would not. It is important for children to learn right from wrong - and I assume some responsibility for this - as it is a vital part of their early years education. Like everything else, as a childminder it is very important to work in partnership with parents (and any other settings a child may attend) in this regard. I will work to ensure that children have a positive sense of themselves and provide opportunities for children to develop their self knowledge, self-esteem and increase their confidence in their own abilities. I have found great success in this by making photo-books of relatives for young children in the setting. It makes them feel at home and helps for them to develop a sense of self awareness. I will also encourage children to have confidence in their own abilities by allowing them to take safe risks (such as climbing at the park, supported for safety). I do not tolerate bullying and believe that early intervention is very important in preventing it. Children are encouraged to have kind hands, feet and words from an early age and I always encourage children to work well together, respecting one another and sharing. Bullying will always be tackled in an age appropriate way. 
 
 I frequently read the Statutory framework for the EYFS in order for it to become second nature and to ensure that I comply with its requirements completely. As discussed above I also read government documents to ensure that I am aware of any new requirements or examples of good practice. I frequently check my practise to ensure that I am complying with the safeguarding and welfare requirements and the learning and development requirements. This means frequent risk assessments and constant vigilance. I have a robust and well thought-out safeguarding policy to refer to any time I need to. I am aware that everyone has a duty to protect children and I have taken a variety of courses on different aspects of safeguarding and child protection. I comply with government regulations for ICO registration and ensure that I update this annually. I also make sure that every three months I refresh my food hygiene knowledge and do a quarterly assessment.
 
 My policies and procedures are available both on my website\footnote{http://www.karlieschildminding.co.uk} and in my setting. All parents read and agree to them before signing contracts with me. I find that it is immeasurably helpful to have written policies to communicate with parents before they start at the setting. This means that they are completely aware of our way of working before they choose to come to us and helps to prevent any disagreements that could arise later. I always stress the importance of working in partnership with parents and explain openly how much I encourage a two-way system of communication and information sharing. In the near future I am going to write three new policies, in order to improve this information sharing. These are a “Potty Training Policy”, a “Sleep Policy”, and a “Sun Protection Policy” This has been added to my action plan. 
+
+\section{School readiness \& next stage of learning}
 
 I understand my role in helping children to transition to other settings and/or to be school-ready and am fully prepared to liaise with appropriate settings to work in the best interests of the child. I understand the importance of encouraging age-appropriate independence in preschool age children to prepare them for Reception class and in using observation, assessment and planning effectively so that they are on their way to achieving the early learning goals by the time they finish their Reception year. When children have left my setting in the past I have sent on their Learning Journeys, most recent end of term assessment, photos and my own contact details in case they need to contact me for any information regarding the child's care that will help to ease their transition into the new setting. I feel personally invested in each child's development so I will always ensure that I enable their new setting to take over observations, assessment and planning as easily as possible.
 
@@ -148,20 +181,20 @@ My vision for the future is laid out in my action plan. I have plans to improve 
 
 \section{Updates}
 
-\begin{description}
+\begin{DESCRIPTION}
 \item [June 2016] Wrote “Sun Protection Policy”, “Sleep Policy”, and “Potty Training Policy”
 \item [June 2016] Read “Teaching and play in the early years – a balancing act?” Ofsted good practice survey to explore perceptions of teaching and play in the early years.
 \item [June 2016] Read “Teaching young children to develop their communication skills: Nicola Phillips, childminder” Ofsted good practice document.
 \item [June 2016] Read “Using the physical environment as a toll for teaching: Netherfield Primary School” Ofsted good practice document.
 \item [June 2016] Attended Safe Sleep Guidance Training
 \item [June 2016] Attended General Update Cluster Training
-\end{description}
+\end{DESCRIPTION}
 
 \chapter{Quality of Teaching, Learning \& Assessment}
 
 Since becoming registered in 2015 - within the early years - I have worked primarily with children under two years of age. I have become extremely familiar with the appropriate EYFS learning and development age bands for this area. I firmly believe that each child should be regarded as an individual and that their development tracker should be appraised independently of any others. I don't allow myself to be limited by these age brackets, just guided by them. This means that I am perfectly happy to note when a child is achieving above what is expected, which I have found can certainly happen from time to time. I have very high expectations of what children can achieve and believe in challenging them whilst being completely supportive and encouraging.
 
-\section{Assessments}
+\section{Assessments \& Planning}
 
 At the end of each school term I assess children individually by noting on their trackers every statement from “Early years outcomes” that they have been observed achieving, to give an indicator of their current level of development. I transfer this information from their tracker to an end of term report sheet that I share with parents. This report has next steps for each of the seven areas of learning and development to inform parents and carers of what we are intending to cover next term and what they can enjoy working on at home. These next steps are added to the child's individual planning sheets and are a good jumping off point to plan for that child's learning from the beginning of the next term. Some next steps are completed quickly and others require a term or even more to achieve, either way we take the activities at the child's pace and try a variety of ways to engage the child in their learning. For example, toy animals, cars, dolls, play phones and trains are all different methods of encouraging noises whilst promoting babies to use sounds during play and are also good activities for an adult to model speech. I am very happy with how my subsequent planning system allows me to assist children to achieve their potential with maximum efficiency. As children's next steps are decided from their tracker and observations it makes my entire planning system very child led. This circle of observation-assessment-planning means that children are consistently monitored. This is very useful in identifying any children who need extra support. I am yet to have a child at the setting who requires extra support, but I am confident that my assessment system will result in me being able to respond quickly and efficiently to anything that arises.
 
@@ -169,24 +202,42 @@ At the end of each school term I assess children individually by noting on their
 
 At the beginning of this year I identified a flaw in my paperwork, that it was taking a long time to get children's photographic evidence into their learning journeys. I purchased a small, bluetooth, photo printer that prints small, sticky back photos that can immediately be stuck on to observations and filed straight away without waiting for them to be developed or printed.
 
+\section{Two-year Check}
+
 I have not yet had to complete a two year check but have received appropriate training on this matter. As the child I have on my register has been here from a young age I will complete the check when they are early into their second year, to ensure that the documentation can be shared with their health visitor/community nursery nurse when the time is appropriate. I understand that best practice is to get the most up to date document that my local authority provides and to complete it with information from the child's tracker in conjunction with their parents. I understand that early intervention is of the utmost importance and am aware of my responsibility to share with parents any concerns I may spot whilst completing this document.
 
-\section{Learning}
+\section{Characterisation of effective learning}
 
 I understand that it is not just what children learn that is important but also how children learn. The activities that I plan support children to develop the characteristics of effective learning, as does the environment that I have created at my setting. I make sure that my activities are varied, ranging from messy play to small world play to water play to open ended resource play etc. I encourage children to explore my setting and the places we visit and enable them to develop their own methods of learning. I always feel a sense of pride when I see children seeking challenges, showing curiosity or taking a risk. Whenever I observe a child demonstrating a new characteristic of effective learning for the first time, I note it on their observation. This is then immediately transferred to their tracker into the area designed to record these instances. If a child shows a particular tendency to one learning method, then I use it in order to encourage them to learn a new skill. For instance, if a child begins to be more confident exploring a familiar location, then I will plan for us to visit a new location with different opportunities for them to develop physically.
 I have discussed previously how I pride myself on working in partnership with parents and carers. 
 I see it as my personal responsibility to have a positive impact on children at all times, in and out of the provision. I have previously provided resources to take home (e.g. home-made taste safe slime and home-made play dough) to promote a continuation of learning in the child's home environment with their parents and extended family.
- 
+
+\section{Working in partnership}
+
 I like to help parents to understand how they can be involved in helping their child to learn. Working in partnership with parents and having an exemplary two way communication system is a vital way to ensure that I am supporting a child's learning both at my setting and at their own home. Parents have commented favourably on the “Today I have enjoyed” section of my daily diaries as it gives a good overview of what their child has enjoyed learning, exploring and playing with. My comments have affected what gifts a child has been given on special occasions and what games extended family are encouraged to play with them when they are their carers. I believe it is important to put all necessary information in the daily diary/communication book for young children to share this with their parents. Conversely, I also encourage and greatly enjoy when parents write back in the communication book and share what activities their child has been partaking in, what new things they have learned and any changes in their routine or behaviour. It is vitally important to me that parents are involved in the learning process and that information goes both ways as it greatly helps me to provide the best tailored care and teaching possible. 
 
+\section{Equal opportunities}
+
 I believe that it is important to promote equality of opportunities and diversity through teaching and I do this by introducing children to a wide variety of festivals, books, figures and environments. It is important to discuss openly and honestly with children how people come in many different shapes, sizes, colours, etc. and how we are all unique and special. Children need an expanded world view and I have previously discreetly discussed with curious children, individuals who are physically or visually impaired whilst we are out in the local area. I also find music from a variety of cultures is a great way to begin to introduce babies to the customs and traditions of others, as well as sampling food from other countries, where appropriate. The local library has a wonderful area on people with differing abilities and this is a great section to explore. In the future, I plan to purchase a large play figure set of people with differing abilities to incorporate into small world play. I also plan to increase my supply of books celebrating different cultural and religious festivals, so I can have them to hand and build on the ones that are available at the library. I look forward to having older children at the provision so we can more deeply explore customs and traditions of other cultures - including traditional dress, food, language, poetry, music, traditional dancing and flags. It is important to expose babies to these things from an early age, but it will have much more of an impact as they get a little older. 
+
+\section{Holistic open-ended play}
 
 I like to give children the freedom to play and explore and enjoy to design activities that are open ended, allowing for freedom of imagination and creativity (as discussed in my love of “invitations to play” previously). An offering of homemade slime and gold coins has previously turned into a counting and sorting activity. Open ended resources are almost limitless in ways that a child can use them and babies at my setting have loved to explore the evolving treasure basket here, as well as a great sensory activity, objects are turned into musical instruments and basic role play props amongst other things. I researched Montessori play techniques and read about the benefits of holistic, unlimited play. I designed the treasure basket around what I had learned and shared this information with parents. I have observed that large ride-on toys and push-along toys can have an impact on a child's ability to think critically, as they have to consider many options and approaches when navigating through different rooms and around furniture. These resources are always available at my setting - and are very popular. Open ended resources are also great way of discussing age-appropriate mathematics development. A sand or water tray is a wonderful place to discuss the differences between big and small objects and to introduce the concept of capacity. 
 We sing a lot in the setting, as I feel that singing is a fantastic way of giving young children a well rounded variety of learning opportunities. Songs cover counting, letters, body parts, animals as well as being a great way to encourage babies to develop speech patterns and to be exposed to rhyming at an early age. Nursery rhyme repetition is a great way of encouraging babies to experiment with their first words. 
 
+\section{Prime \& specific areas of learning \& development}
+
 As I work predominantly with very young children I understand the importance of focusing on the prime areas of development in order to build a good foundation for learning that will then affect the specific areas of development. I ensure that all of my activities include a holistic approach, for instance any activity can be used as an opportunity to encourage personal, social and emotional development if it involves positively interacting with other children, sharing, taking turns etc. The aspects of making relationships and managing feelings and behaviour can be nurtured in almost any activity. Some of my most rewarding time with young children so far has been encouraging them to learn aspects of physical development, such as rolling from back to front and taking first steps. These are very exciting milestones and I am privileged to be able to share this task with parents. A lot of time has been spent building up young children's sense of security and confidence to enable them to take those first steps. We have also worked on using both hands whilst playing and other actions that perfect their moving and handling skills. More recently we have been focusing on communication and language skills. We have been singing a lot of songs and encouraging children to copy sounds and use sounds during play. We are also working on recognising familiar words and are making happy progress. This, in particular, is an area where I like to work in partnership with parents as I am very eager to hear how children are progressing at home. 
 
-Occasionally I see a child playing with a resource and realise that the activity can be adapted to suit their play more appropriately and to develop their learning. A good example of this is when a child has previously been playing in the sand, pouring the sand from container to container but then prefers to try and build sand castles. The resource needed to be altered to enable them to do this, so I added water to make it possible. I then went on to model sand castle building and the children rapidly preferred destruction to construction, so I adapted again and made many sand castles for them to knock over. An adaptation of my daily routine had to be made when I first had babies attend the setting. Lunch had to be moved earlier to allow for the fact that they would be too sleepy to wait until the planned time. Our whole daily routine is now planned around this requirement. Routines and predictability are very important to create a secure environment where children feel comfortable to explore, discover and learn. In my experience a good routine can diminish unwanted  behaviour, as children feel more comfortable with stability. Good routines also allow young children to progress learning due to repetition. For instance a young child in my setting knows the area in which we sit together and they have their bottle of milk, meaning that as soon as they see the bottle they make their way over to the area. 
+\section{Adopting resources \& spontaneous planning}
+
+Occasionally I see a child playing with a resource and realise that the activity can be adapted to suit their play more appropriately and to develop their learning. A good example of this is when a child has previously been playing in the sand, pouring the sand from container to container but then prefers to try and build sand castles. The resource needed to be altered to enable them to do this, so I added water to make it possible. I then went on to model sand castle building and the children rapidly preferred destruction to construction, so I adapted again and made many sand castles for them to knock over.
+
+\section{The importance of routine}
+
+An adaptation of my daily routine had to be made when I first had babies attend the setting. Lunch had to be moved earlier to allow for the fact that they would be too sleepy to wait until the planned time. Our whole daily routine is now planned around this requirement. Routines and predictability are very important to create a secure environment where children feel comfortable to explore, discover and learn. In my experience a good routine can diminish unwanted  behaviour, as children feel more comfortable with stability. Good routines also allow young children to progress learning due to repetition. For instance a young child in my setting knows the area in which we sit together and they have their bottle of milk, meaning that as soon as they see the bottle they make their way over to the area. 
+
+\section{Starting points \& a child's first few weeks here}
 
 I have discussed previously my method for obtaining starting points from parents; how all parents are given a copy of “Early years outcomes” before the child starts and asked to highlight the statements in there that they believe their child has demonstrated. I then spend the first month of a child's time here carefully observing them to gather evidence for these statements and note them on the child's development tracker alongside their parent's contributions. This ensures that I am able to monitor a child's progress from the beginning of their time with me and am able to ensure that all activities will be of benefit to them, encouraging them to move down their own pathway of learning, with their own next steps. It is obviously not good practice to plan activities for a child until you have spoken to their parents and observed what they can or cannot do. This is the best way to make sure that the activities you plan will enable the child to progress to the best of their ability.
 
