@@ -2,9 +2,9 @@ title: About Me…
 save_as: index.html
 url: 
 
-Hi, my name is Karlie. I am in my late 20s and I am an Ofsted-registered childminder living in the Walkden area — only a stone's throw from the train station and 5 minutes from Walkden centre. 
+Hi, my name is Karlie. I am in my early 30s and I am an Ofsted-registered childminder living in the Walkden area — only a stone's throw from the train station and 5 minutes from Walkden centre. 
 
-I have worked with children for over 8 years — from babies to children aged 14 years old — in a variety of settings, including private nurseries, children's centres, after-school clubs, primary schools and high schools.  I am trained in paediatric first aid, food hygiene, behaviour management, child protection and child development tracking.
+I have worked with children for over 9 years — from babies to children aged 14 years old — in a variety of settings, including private nurseries, children's centres, after-school clubs, primary schools and high schools.  I am trained in paediatric first aid, food hygiene, behaviour management, child protection and child development tracking.
 
 I like to encourage learning in a fun, interactive, safe, home style environment and aim to ensure that each child reaches their full potential. I live in a three-bedroom house with my partner, Ross, and my daughter Isobel, who is 3 years old. Our household is vegetarian, as are the meals that I provide for the children. My meals are home cooked, healthy, meat free and delicious (see [sample menus](/files/sample-menus.pdf)), though I will serve meat to children if parents provide it in the form of a pre cooked packed lunch. 
 
