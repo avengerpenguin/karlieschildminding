@@ -47,3 +47,5 @@ THUMBNAIL_SIZES={
     'thumbnails': '134x120',
 }
 THUMBNAIL_KEEP_NAME=True
+
+DISPLAY_PAGES_ON_MENU = True
